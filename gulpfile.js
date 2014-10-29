@@ -61,6 +61,13 @@ gulp.task('browserify', ['templates'], function () {
                     angular: 'angular'
                 }
             },
+            'angular-bootstrap': {
+                path: 'bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js',
+                exports: 'ui.bootstrap',
+                depends: {
+                    angular: 'angular'
+                }
+            },
             'prex-templates': {
                 path: 'app/templates/templates.js',
                 exports: 'angular',

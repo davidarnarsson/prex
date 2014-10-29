@@ -31,3 +31,6 @@ build/Release
 # Users Environment Variables
 .lock-wscript
 
+
+#database
+data/

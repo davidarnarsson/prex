@@ -37,8 +37,21 @@
     top: 50%;
     overflow: scroll;
   }
-  .inner {
-    
+}
+
+
+.settings-menu {
+  position: fixed; 
+  z-index: 600;
+  top: -100px;
+  left: 0px;
+  right: 0px;
+  height: 100px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.10);
+  transition: all 0.3s ease-in-out;
+
+  &.is-visible {
+    top: 0px;
   }
 }
 
