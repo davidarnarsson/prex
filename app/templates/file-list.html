@@ -1,0 +1,14 @@
+<table class="table table-hover table-striped">
+  <thead>
+    <tr>
+      <th>File name</th>
+      <th>File size</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="file in files" ng-click="onChoose(file)">
+      <td> {{ file.name }} </td>
+      <td> {{ file.size }} </td>
+    </tr>
+  </tbody>
+</table>
