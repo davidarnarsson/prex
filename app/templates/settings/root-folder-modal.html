@@ -1,1 +1,31 @@
-root-folder-modal.html
+
+  <div class="modal-header">
+      <h3 class="modal-title">Add a root folder</h3>
+  </div>
+  <div class="modal-body">
+     <form class="form-horizontal" name="pathForm" ng-submit="ok()" novalidate>
+       <div class="form-group" ng-repeat="path in paths"> 
+         <label for="path" class="control-label col-md-2">
+           Path
+         </label>
+         <div class="col-md-10">
+           <div class="input-group">
+              <input type="text" ng-model="path.path" required class="form-control" />  
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-danger" ng-disabled="paths.length < 2" ng-click="remove(path)"> 
+                  <span class="glyphicon glyphicon-minus"> </span> 
+                </button>
+              </span>
+           </div>
+         </div>
+       </div>
+      
+     </form>
+  </div>
+  <div class="modal-footer">
+    
+      <button class="btn btn-default" type="button" ng-click="paths.push({})">+ Path</button>
+      <button class="btn btn-primary" ng-disabled="pathForm.$invalid" ng-click="pathForm.submit()">OK</button>
+      <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    
+  </div>

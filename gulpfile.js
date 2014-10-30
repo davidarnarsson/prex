@@ -63,7 +63,7 @@ gulp.task('browserify', ['templates'], function () {
             },
             'angular-bootstrap': {
                 path: 'bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js',
-                exports: 'ui.bootstrap',
+                exports: 'angular',
                 depends: {
                     angular: 'angular'
                 }
